@@ -20,11 +20,16 @@ void loop()
     Serial.println(serialA);
   }
   if(serialA == '1'){
-  Serial.println("Sending IR signal");
- 
-  SendOnCode();
-  delay(500);
-  SendOffCode();
+    Serial.println("Sending IR On/Off signal");
+    SendOnCode();
+    delay(500);
+    SendOffCode();
+  }else if(serialA == '2'){
+    Serial.println("Sending IR On signal");
+    SendOnCode();
+  }else if(serialA == '3'){
+    Serial.println("Sending IR Off signal");
+    SendOffCode();
   }
 }
  
